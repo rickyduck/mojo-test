@@ -21,6 +21,7 @@
   border-radius: 5px;
   background: var(--darkGrey);
   margin-bottom: 20px;
+  background-size: cover;
 }
 
 .buildingsGridItem h6 {

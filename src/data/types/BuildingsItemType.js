@@ -24,6 +24,7 @@ const BuildingsItemType = new ObjectType({
     offices: { type: new NonNull(StringType) },
     price:  { type: new NonNull(StringType) },
     image: { type: new NonNull(StringType) },
+    type: { type: new NonNull(StringType) },
     forRent: { type: Boolean },
   },
 });

@@ -7,14 +7,15 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Buildings from './Buildings';
+import React from "react";
+import BuildingsContainer from './BuildingsContainer';
 import Layout from '../../components/Layout';
+
 
 async function action({ fetch }) {
   const resp = await fetch('/graphql', {
     body: JSON.stringify({
-      query: '{buildings{title,address1,address2,users,offices,price,forRent,image}}',
+      query: '{buildings{title,address1,address2,users,offices,price,forRent,image, type}}',
     }),
   });
   const { data } = await resp.json();
@@ -24,7 +25,7 @@ async function action({ fetch }) {
     chunks: ['buildings'],
     component: (
       <Layout>
-        <Buildings buildings={data.buildings} />
+        <BuildingsContainer buildings={data.buildings} />
       </Layout>
     ),
   };

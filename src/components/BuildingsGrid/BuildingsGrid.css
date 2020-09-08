@@ -10,7 +10,7 @@
 @import '../variables.css';
 
 .root, .buildingsGrid {
-  height: calc(100% - 60px);
+  height: calc(100% - 19px);
   
 }
 .buildingsGridHeader {
@@ -19,6 +19,7 @@
   color: var(--text);
   line-height: var(--gutterWidth);
   height: var(--gutterWidth);
+  padding: 0 var(--gutterWidth) 0 0;
 }
 
 .buildingsGrid {
@@ -26,7 +27,7 @@
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: var(--gutterWidth);
-  padding-top: var(--gutterWidth);
+  padding: var(--gutterWidth) var(--gutterWidth) 0 0;
 }
 
 .layoutOptions {

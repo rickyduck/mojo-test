@@ -10,11 +10,15 @@
 import useStyles from 'isomorphic-style-loader/useStyles';
 import React from 'react';
 import s from './BuildingsGrid.css';
+import PropTypes from 'prop-types';
+import BuildingType from '../../types/Building';
+
 import BuildingsGridItem from '../BuildingsGridItem';
 import gridIconUrl from './grid-icon.png';
 import listIconUrl from './list-icon.png';
 
-export default function BuildingsGrid() {
+export default function BuildingsGrid({ buildings }) {
+  console.log(buildings);
   useStyles(s);
   return (
     <div className={s.root}>
@@ -26,17 +30,21 @@ export default function BuildingsGrid() {
                 <a href="#"><img src={gridIconUrl} alt="Grid Icon" /></a>
               </menu>
             </div>
-
             <section className={s.buildingsGrid} role="main">
-              <BuildingsGridItem />
-              <BuildingsGridItem />
-              <BuildingsGridItem />
-              <BuildingsGridItem />
-              <BuildingsGridItem />
-              <BuildingsGridItem />
-              <BuildingsGridItem />
-              <BuildingsGridItem />
+              {
+                buildings.map((building) => (
+                  <BuildingsGridItem building={building} />
+                ))
+              }
+              
+              
             </section>
     </div>
   );
 }
+
+BuildingsGrid.propTypes = {
+  buildings: PropTypes.arrayOf(
+    BuildingType
+  ).isRequired,
+};
