@@ -10,18 +10,22 @@
 import {
   GraphQLObjectType as ObjectType,
   GraphQLString as StringType,
+  GraphQLBoolean as Boolean,
   GraphQLNonNull as NonNull,
 } from 'graphql';
 
-const NewsItemType = new ObjectType({
-  name: 'NewsItem',
+const BuildingsItemType = new ObjectType({
+  name: 'BuildingsItem',
   fields: {
     title: { type: new NonNull(StringType) },
-    link: { type: new NonNull(StringType) },
-    author: { type: StringType },
-    pubDate: { type: new NonNull(StringType) },
-    content: { type: StringType },
+    address1: { type: new NonNull(StringType) },
+    address2: { type: new NonNull(StringType) },
+    users: { type: new NonNull(StringType) },
+    offices: { type: new NonNull(StringType) },
+    price:  { type: new NonNull(StringType) },
+    image: { type: new NonNull(StringType) },
+    forRent: { type: Boolean },
   },
 });
 
-export default NewsItemType;
+export default BuildingsItemType;

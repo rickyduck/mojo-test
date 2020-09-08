@@ -12,19 +12,19 @@ import Buildings from './Buildings';
 import Layout from '../../components/Layout';
 
 async function action({ fetch }) {
-  // const resp = await fetch('/graphql', {
-  //   body: JSON.stringify({
-  //     query: '{news{title,link,content}}',
-  //   }),
-  // });
-  // const { data } = await resp.json();
-  // if (!data || !data.news) throw new Error('Failed to load the news feed.');
+  const resp = await fetch('/graphql', {
+    body: JSON.stringify({
+      query: '{buildings{title,address1,address2,users,offices,price,forRent,image}}',
+    }),
+  });
+  const { data } = await resp.json();
+  if (!data || !data.buildings) throw new Error('Failed to load the news feed.');
   return {
     title: 'React Starter Kit',
     chunks: ['buildings'],
     component: (
       <Layout>
-        <Buildings />
+        <Buildings buildings={data.buildings} />
       </Layout>
     ),
   };

@@ -11,10 +11,12 @@ import useStyles from 'isomorphic-style-loader/useStyles';
 import React from 'react';
 import PropTypes from 'prop-types';
 import BuildingsHeader from '../../components/BuildingsHeader/BuildingsHeader';
-import BuildingsGrid from '../../components/BuildingsGrid/BuildingsGrid';
+import BuildingsGrid from '../../components/BuildingsGrid';
+
+import BuildingType from '../../types/Building';
 import s from './Buildings.css';
 
-export default function Buildings({ news }) {
+export default function Buildings({ buildings }) {
   useStyles(s);
   return (
     <div className={s.root}>
@@ -22,7 +24,7 @@ export default function Buildings({ news }) {
         <BuildingsHeader />
         <main className={s.mainContent}>
           <section className={s.buildings}>
-            <BuildingsGrid />
+            <BuildingsGrid buildings={buildings} />
           </section>
           <section className={s.map}>
             map
@@ -34,11 +36,7 @@ export default function Buildings({ news }) {
 }
 
 Buildings.propTypes = {
-  // news: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     title: PropTypes.string.isRequired,
-  //     link: PropTypes.string.isRequired,
-  //     content: PropTypes.string,
-  //   }),
-  // ).isRequired,
+  buildings: PropTypes.arrayOf(
+    BuildingType
+  ).isRequired,
 };

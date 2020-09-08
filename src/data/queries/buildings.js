@@ -9,19 +9,18 @@
 
 import { GraphQLList as List } from 'graphql';
 import fetch from 'node-fetch';
-import NewsItemType from '../types/NewsItemType';
+import BuildingsItemType from '../types/BuildingsItemType';
 
 // React.js News Feed (RSS)
 const url =
-  'https://api.rss2json.com/v1/api.json' +
-  '?rss_url=https%3A%2F%2Freactjsnews.com%2Ffeed.xml';
+  'http://localhost:3000/api/buildings';
 
 let items = [];
 let lastFetchTask;
 let lastFetchTime = new Date(1970, 0, 1);
 
-const news = {
-  type: new List(NewsItemType),
+const buildings = {
+  type: new List(BuildingsItemType),
   resolve() {
     if (lastFetchTask) {
       return lastFetchTask;
@@ -50,9 +49,8 @@ const news = {
 
       return lastFetchTask;
     }
-
     return items;
   },
 };
 
-export default news;
+export default buildings;
