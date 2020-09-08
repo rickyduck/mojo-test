@@ -20,6 +20,6 @@ See `data/` for querying the graphql
 
 `npm install` & `npm run start` to launch locally. 
 
-I was going to take an atomic approach with styled components, and would have liked to include storybook for a more appropriate reflection of my UI pattern. I also would have liked to use cypress. 
+I was going to take an atomic approach with styled components, and would have liked to include storybook for a more appropriate reflection of my UI pattern. I also would have liked to use cypress to test the React components in isolation & e2e. 
 
 The GraphQL instance interacts with a static rest end point for more concise composition and seperation of concerns. 
