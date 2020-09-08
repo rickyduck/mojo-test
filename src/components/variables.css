@@ -12,13 +12,16 @@
    * Typography
    * ======================================================================== */
 
-  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
-
+  --font-family-base: 'Roboto', 'HelveticaNeue-Light', sans-serif;
+  --header-size: 16px;
+  --large-heading-size: 18px;
+  --body-size: 14px;
   /*
    * Layout
    * ======================================================================== */
 
   --max-content-width: 1000px;
+  --gutterWidth: 30px;
 
   /*
    * Media queries breakpoints
@@ -28,11 +31,16 @@
   --screen-sm-min: 768px;  /* Small screen / tablet */
   --screen-md-min: 992px;  /* Medium screen / desktop */
   --screen-lg-min: 1200px; /* Large screen / wide desktop */
-  --gutterWidth: 30px;
+
+  /* Colors */
+  --border: #e2e5ed;
+  --text: #3e3f42;
   --divider: #2e2e33;
   --dividerLight: #eaedf3;
   --darkGrey: #252529;
   --midGrey: #9ea0a5;
+  --light: #9ea0a5;
+
   --white: #fff;
   --blue: #1665d8;
 

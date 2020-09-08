@@ -1,0 +1,6 @@
+{
+  "name": "BuildingsGrid",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./BuildingsGrid.js"
+}

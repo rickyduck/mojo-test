@@ -10,6 +10,8 @@
 import useStyles from 'isomorphic-style-loader/useStyles';
 import React from 'react';
 import PropTypes from 'prop-types';
+import BuildingsHeader from '../../components/BuildingsHeader/BuildingsHeader';
+import BuildingsGrid from '../../components/BuildingsGrid/BuildingsGrid';
 import s from './Buildings.css';
 
 export default function Buildings({ news }) {
@@ -17,7 +19,15 @@ export default function Buildings({ news }) {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        
+        <BuildingsHeader />
+        <main className={s.mainContent}>
+          <section className={s.buildings}>
+            <BuildingsGrid />
+          </section>
+          <section className={s.map}>
+            map
+          </section>
+        </main>
       </div>
     </div>
   );
