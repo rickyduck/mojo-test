@@ -11,6 +11,9 @@ and newcomers to the industry.
 See `server.js` for express, GraphQL & SSR bootstrapping.
 
 See `routes/building/` for page level stuff including search/filters (`Buildings.js`) and graphql fetch,
+
 See `components/` for composites
+
 See `context/` for the context bootstrapping
+
 See `data/` for querying the graphql 
