@@ -17,3 +17,5 @@ See `components/` for composites
 See `context/` for the context bootstrapping
 
 See `data/` for querying the graphql 
+
+`npm install` & `npm run start` to launch locally. 
