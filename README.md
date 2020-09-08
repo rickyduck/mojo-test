@@ -8,9 +8,9 @@ and [Browsersync](http://www.browsersync.io/). Helping you to stay productive
 following the best practices. A solid starting point for both professionals
 and newcomers to the industry.
 
-**See** [getting started guide](./docs/getting-started.md), [demo][demo],
-[docs](https://github.com/kriasoft/react-starter-kit/tree/master/docs),
-[roadmap](https://github.com/kriasoft/react-starter-kit/projects/1) &nbsp;|&nbsp;
-**Join** [#react-starter-kit][chat] chat room on Gitter &nbsp;|&nbsp;
-**Visit our sponsors**:<br><br>
+See `server.js` for express, GraphQL & SSR bootstrapping.
 
+See `routes/building/` for page level stuff including search/filters (`Buildings.js`) and graphql fetch,
+See `components/` for composites
+See `context/` for the context bootstrapping
+See `data/` for querying the graphql 
