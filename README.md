@@ -19,3 +19,7 @@ See `context/` for the context bootstrapping
 See `data/` for querying the graphql 
 
 `npm install` & `npm run start` to launch locally. 
+
+I was going to take an atomic approach with styled components, and would have liked to include storybook for a more appropriate reflection of my UI pattern. I also would have liked to use cypress. 
+
+The GraphQL instance interacts with a static rest end point for more concise composition and seperation of concerns. 
