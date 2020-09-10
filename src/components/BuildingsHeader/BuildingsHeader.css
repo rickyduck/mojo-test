@@ -83,6 +83,7 @@
   padding: 0 12px;
   border: solid 1px var(--border);
   border-radius: 4px;
+  width: 51px;
 }
 
 .languageSelect {
@@ -103,4 +104,25 @@
   float: left;
   height: calc(var(--height) + 2px);
   background: var(--border);
+}
+
+@media only screen and (max-width: 992px)  {
+  .root {
+    width: calc(100% - 15px);
+  }
+  .buildingTypes {
+    position: relative;
+    height: 38px;
+  }
+  .container {
+    margin-bottom: 0;
+  }
+  .rightSection {
+    margin-top: 0;
+    float: none;
+    height: 40px;
+  }
+  .search {
+    width: calc(100% - 170px);
+  }
 }

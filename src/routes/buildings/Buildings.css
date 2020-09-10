@@ -34,3 +34,35 @@
   background: var(--light);
 }
 
+.button {
+  display: inline-block;
+  height: var(--height);
+  line-height: var(--height);
+  padding: 0 12px;
+  border: solid 1px var(--border);
+  color: var(--text);
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.button.active {
+  color: var(--white);
+  background: var(--blue);
+}
+
+@media only screen and (max-width: 992px)  {
+  .mobileView {
+    padding: var(--gutterWidth) 0 0 10px;
+  }
+
+  .buildings, .map {
+    width: calc(100% - 15px);
+  }
+
+}
+@media only screen and (max-width: 768px)  {
+  .root { width: calc(100% - 40px); }
+  .root, .container, .mainContent, .buildings, .map {
+    height: calc(100% -75px);
+  }
+}

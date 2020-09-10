@@ -8,8 +8,12 @@
  */
 @import '../variables.css';
 
-.root {
+.topContainer {
+  height: 100%;
   float: left;
+
+}
+.root {
   width: 270px;
   background-color: var(--darkGrey);
   color: var(--white);
@@ -17,6 +21,7 @@
   height: 100%;
 }
 
+.showSidebar { display: none; }
 .header { 
   border-bottom: solid 1px;
   border-color: var(--divider);
@@ -24,7 +29,12 @@
   font-size: var(--header-size);
   padding: 25px var(--gutterWidth);
 }
-
+.header a {
+  display: none;
+  float: right;
+  color: var(--white);
+  text-decoration: none;
+}
 .container { 
   padding: 15px var(--gutterWidth);
 }
@@ -75,3 +85,27 @@
   background: var(--divider);
 }
 
+@media only screen and (max-width: 768px)  {
+  .header a {
+    display: inline-block;
+  }
+  .showSidebar {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    z-index: 2;
+
+  }
+  .root {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+    left: -270px;
+    height: 100%;
+    z-index: 2;
+  }
+  .root.visible {
+    left: 0;
+  }
+}

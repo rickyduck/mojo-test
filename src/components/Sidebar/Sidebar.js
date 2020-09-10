@@ -12,12 +12,21 @@ import React from 'react';
 import s from './Sidebar.css';
 import Link from '../Link';
 
+import hamburgerIcon from './hamburger-icon.png';
+
+
 export default function Sidebar({children}) {
   useStyles(s);
+  const [displaySidebar, setDisplaySidebar] = React.useState(false);
   return (
-    <aside className={s.root} role="sidebar">
+    <div className={s.topContainer}>
+      <a href="#" onClick={() => setDisplaySidebar(!displaySidebar)} className={s.showSidebar}>
+        <img src={hamburgerIcon} width="25px" />
+      </a>
+    <aside className={`${s.root} ${displaySidebar && s.visible}`} role="sidebar">
       <header className={s.header}>
         Buildings
+        <a href="#" onClick={() => setDisplaySidebar(false)}>X</a>
       </header>
       <section role="main" className={s.container}>
         <h5 className={s.heading5}>Menu</h5>
@@ -40,5 +49,6 @@ export default function Sidebar({children}) {
       </section>
       
     </aside>
+    </div>
   );
 }

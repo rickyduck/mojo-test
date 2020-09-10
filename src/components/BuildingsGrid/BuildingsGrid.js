@@ -32,8 +32,9 @@ export default function BuildingsGrid({ buildings }) {
             </div>
             <section className={s.buildingsGrid} role="main">
               {
-                buildings.map((building) => (
-                  <BuildingsGridItem building={building} />
+                buildings.map((building, i) => (
+                  //would usually use building.id for the key, index from local array isn't performant 
+                  <BuildingsGridItem key={`building-${i}`} building={building} />
                 ))
               }
               
